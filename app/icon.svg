@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#2457a7"/><path d="M17 20h30v24H17zM24 14v36M40 14v36" fill="none" stroke="#fff" stroke-width="4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" fill="#131412" />
+  <rect x="4" y="4" width="56" height="56" fill="none" stroke="#3A3B37" stroke-width="1.5" />
+  <line x1="32" y1="6" x2="32" y2="21" stroke="#D9D4C9" stroke-width="1.5" />
+  <circle cx="32" cy="23" r="2.2" fill="none" stroke="#C7A45E" stroke-width="1.5" />
+  <polygon points="24,27 40,27 32,54" fill="#C7A45E" />
+  <line x1="32" y1="27" x2="32" y2="54" stroke="#131412" stroke-width="1.2" opacity="0.35" />
+  <line x1="22" y1="54" x2="42" y2="54" stroke="#A5452A" stroke-width="1.5" />
+</svg>

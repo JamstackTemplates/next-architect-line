@@ -17,10 +17,7 @@ The `.claude/skills/` folder holds `write-plan` (drafts `plan/PLAN.md`) and `cle
 
 ## Structure and content
 
-`content/business.ts` holds the starter's shared business details and sample copy. When building a
-site, write page-specific copy directly in the route's `app/**/page.tsx` as JSX children of named React
-components. Put headings, calls to action, labels and captions in page order. Backing components
-own the semantic markup, Tailwind styles, accessibility and behavior. Keep typed data in `content/`
+`content/business.ts` holds shared business details (Plumb Line Architects contact info, Monadnock address, opening hours and enquiry copy). Structured collections live in `content/projects.ts`, `content/awards.ts`, `content/process.ts` and `content/studio.ts`, each with item-specific validators tested in `tests/content.test.ts`. Page-specific copy lives directly in each route's `app/**/page.tsx` (`app/page.tsx`, `app/work/page.tsx`, `app/work/[id]/page.tsx`, `app/process/page.tsx`, `app/studio/page.tsx`, `app/contact/page.tsx`, `app/not-found.tsx`) as JSX children of named React components in `components/`. Backing components own the semantic markup, Tailwind styles, accessibility and behavior. Bespoke inline SVG drawings live in `components/drawings/`. Keep typed data in `content/`
 for values the site reads programmatically, including contact details and structured collections.
 Document fields and validate IDs, required
 fields, prices, availability and references with item-specific failures. Rename in content and

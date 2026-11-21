@@ -1,16 +1,46 @@
-"use client";
+'use client';
+
 import { useEffect, useState } from 'react';
-import { openingLabel, type OpeningHours } from '../lib/hours';
+import { business } from '../content/business';
+import { studioOpeningLabel, type OpeningHours } from '../lib/hours';
 import { site } from '../lib/site';
 
-/** Optional. Neutral static output; browser refreshes in the business zone every minute. */
-export function OpenBadge({ hours }: { hours: readonly OpeningHours[] }) {
-  const [label, setLabel] = useState('See opening hours');
+/**
+ * Browser-computed studio opening status in America/Chicago, refreshed every minute.
+ * Static and no-JS output renders the neutral weekly hours summary only.
+ */
+export function OpenBadge({
+  hours,
+  fallback = business.hoursSummary,
+}: {
+  hours: readonly OpeningHours[];
+  fallback?: string;
+}) {
+  const [status, setStatus] = useState<{ state: 'open' | 'closed' | 'unknown'; label: string }>({
+    state: 'unknown',
+    label: fallback,
+  });
+
   useEffect(() => {
-    const update = () => setLabel(openingLabel(hours, site.timeZone));
+    const update = () => setStatus(studioOpeningLabel(hours, site.timeZone, fallback));
     update();
     const timer = setInterval(update, 60_000);
     return () => clearInterval(timer);
-  }, [hours]);
-  return <span>{label}</span>;
+  }, [hours, fallback]);
+
+  return (
+    <span className="inline-flex items-center gap-2 font-mono text-[0.74rem] uppercase tracking-[0.12em] text-ink">
+      <span
+        aria-hidden="true"
+        className={`h-2 w-2 shrink-0 rounded-full ${
+          status.state === 'open'
+            ? 'bg-brass'
+            : status.state === 'closed'
+              ? 'border border-muted bg-transparent'
+              : 'bg-line'
+        }`}
+      />
+      <span>{status.label}</span>
+    </span>
+  );
 }

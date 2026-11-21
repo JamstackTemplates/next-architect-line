@@ -1,7 +1,8 @@
 {
-  "name": "Jamstacks starter",
-  "description": "A neutral Next.js foundation for Jamstacks websites.",
-  "domain": "",
+  "name": "Plumb Line Architects",
+  "description": "Plumb Line Architects is a Chicago studio designing austere, material-led houses, civic buildings and adaptive reuse projects. See the work, the process and the awards.",
+  "domain": "next-architect-line.jamstacks.net",
+  "timeZone": "America/Chicago",
   "jamstacks": {
     "siteId": "",
     "cdnUrl": "https://cdn.jamstacks.net"

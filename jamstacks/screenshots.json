@@ -1,0 +1,17 @@
+{
+  "templateId": "next-architect-line",
+  "captures": [
+    {
+      "mode": "light",
+      "file": "jamstacks/home-light.jpg",
+      "bytes": 665103,
+      "sha256": "9d86702567a30e897aec800dd36e47817c1a7b19fba7a17da99bc4ce36965dc1"
+    },
+    {
+      "mode": "dark",
+      "file": "jamstacks/home-dark.jpg",
+      "bytes": 601326,
+      "sha256": "ce421c59ebf0c299807f22f980ddde7e909ad4a0f2c226999fc8ee355dd3c6d4"
+    }
+  ]
+}
