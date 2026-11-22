@@ -1,17 +1,22 @@
 {
   "templateId": "next-architect-line",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "fullPage": false,
   "captures": [
     {
       "mode": "light",
+      "sha256": "d917e42e625c2099040fac06c78a1792d6132904f228f482b43cc146f1c4f3b0",
       "file": "jamstacks/home-light.jpg",
-      "bytes": 665103,
-      "sha256": "9d86702567a30e897aec800dd36e47817c1a7b19fba7a17da99bc4ce36965dc1"
+      "bytes": 111967
     },
     {
       "mode": "dark",
+      "sha256": "521c3128df0f65f8d1c8ab7f9c6cfe8d69c4fd9dce7761e076d816eafa7f2e8b",
       "file": "jamstacks/home-dark.jpg",
-      "bytes": 601326,
-      "sha256": "ce421c59ebf0c299807f22f980ddde7e909ad4a0f2c226999fc8ee355dd3c6d4"
+      "bytes": 106065
     }
   ]
 }
